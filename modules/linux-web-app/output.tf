@@ -15,12 +15,12 @@ output "default_hostname" {
 
 output "principal_id" {
   description = "The principal ID of the Linux Web App managed identity."
-  value       = azurerm_linux_web_app.this.identity[0].principal_id
+  value       = try(azurerm_linux_web_app.this.identity[0].principal_id, null)
 }
 
 output "tenant_id" {
   description = "The tenant ID of the Linux Web App managed identity."
-  value       = azurerm_linux_web_app.this.identity[0].tenant_id
+  value       = try(azurerm_linux_web_app.this.identity[0].tenant_id, null)
 }
 
 output "service_plan_id" {

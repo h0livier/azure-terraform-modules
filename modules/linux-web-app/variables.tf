@@ -59,7 +59,7 @@ variable "https_only" {
 }
 
 variable "identity_type" {
-  description = "The type of managed identity for the Linux Web App (SystemAssigned, UserAssigned, or SystemAssigned, UserAssigned)."
+  description = "The type of managed identity for the Linux Web App. Accepted values: SystemAssigned, UserAssigned, or both combined."
   type        = string
   default     = "SystemAssigned"
 }
